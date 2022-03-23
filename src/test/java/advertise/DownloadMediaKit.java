@@ -25,6 +25,7 @@ public class DownloadMediaKit extends BaseDriver implements Utilities {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(ad.advertise())).click();
 
+        removeAD2(driver); // If any
         //Scroll to button
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, 700);");

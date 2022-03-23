@@ -19,7 +19,7 @@ public class SigninSignup_POM {
     By facebookBtn = By.xpath("//a[@aria-label='FACEBOOK Button']");
     By googleBtn = By.xpath("//a[@aria-label='GOOGLE Button']");
     By gmailSigninInp = By.id("identifierId");
-    By gmailSigninNext = By.xpath("(//div[@class='VfPpkd-Jh9lGc'])[3]");
+    By gmailSigninNext = By.xpath("(//div[@class='VfPpkd-RLmnJb'])[1]");
 
     By nameInput = By.name("name");
     By emailInput = By.name("email");

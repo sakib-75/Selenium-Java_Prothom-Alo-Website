@@ -12,7 +12,7 @@ public interface Utilities {
 
     default void implicitWait(WebDriver driver) {
         // Implicit wait
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     default void assertTrue(WebDriver driver, String expectedUrl) {
@@ -38,6 +38,7 @@ public interface Utilities {
     }
 
     default void removeAD(WebDriver driver) {
+        // AD type 1
         try {
             String framePath = "(//iframe[@id='google_ads_iframe_85406138/home_Int_660x440_0'])[1]";
             WebElement frame = driver.findElement(By.xpath(framePath));
@@ -47,8 +48,25 @@ public interface Utilities {
             driver.switchTo().defaultContent();
 
         } catch (Exception e) {
-            System.out.println("No pop-up AD!");
+            System.out.println("No pop-up AD");
         }
+
+    }
+
+    default void removeAD2(WebDriver driver) {
+        // AD type 2
+        try {
+            String framePath = "(//iframe[@id='google_ads_iframe_85406138/News_Int_660x440_0'])[1]";
+            WebElement frame = driver.findElement(By.xpath(framePath));
+
+            driver.switchTo().frame(frame);
+            driver.findElement(By.xpath("//*[@id=\"closebutton\"]/img")).click();
+            driver.switchTo().defaultContent();
+        }
+        catch (Exception e){
+            System.out.println("No pop-up AD");
+        }
+
     }
 
     default void removeFooterAD(WebDriver driver) {
