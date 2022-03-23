@@ -1,6 +1,5 @@
 package follow_us;
 
-import java.util.ArrayList;
 import org.openqa.selenium.WebElement;
 import base.BaseDriver;
 import utilities.Utilities;

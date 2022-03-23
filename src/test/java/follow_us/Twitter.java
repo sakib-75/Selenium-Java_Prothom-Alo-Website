@@ -2,7 +2,6 @@ package follow_us;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import page_object_model.FollowUsPOM;
 
 public class Twitter extends FollowUs {
